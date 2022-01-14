@@ -7,11 +7,9 @@ import lombok.SneakyThrows;
 import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.CommandSender;
 import net.md_5.bungee.api.plugin.Command;
-import net.md_5.bungee.protocol.packet.Chat;
 
 import java.sql.*;
 import java.time.Instant;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -117,7 +115,7 @@ public class CommandMigrate extends Command {
              String advancementData = resultSet.getString("advancements");
              String locationData = resultSet.getString("location");
              String statisticData = resultSet.getString("statistics");
-            DataRecord record = new DataRecord(player_id, dataVersionUUID, dataSaveTimestamp, serializedInventory, serializedEnderChest,
+             DataRecord record = new DataRecord(player_id, dataVersionUUID, dataSaveTimestamp, serializedInventory, serializedEnderChest,
                     health, maxHealth, healthScale, hunger, saturation, saturationExhaustion, selectedSlot, statusEffects,
                     totalExperience, expLevel, expProgress, gameMode, statisticData, isFlying, advancementData, locationData);
             copyDataEntry(record, plugin.getMysqlConnection(),cluster.getDataTable());
