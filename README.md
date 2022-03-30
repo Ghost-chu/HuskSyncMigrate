@@ -3,10 +3,6 @@ HuskSync mysql migrate helper.
 
 ---
 
-## DO NOT PUBLIC THIS REPOSITORY
-
-This repository contains protected code by DMCA and can be take down.
-
 ## Usage
 
 Step 1. Shutdown proxy, Setup mysql credentials in HuskSync configuration (You will need set datasource to MySQL in this step to make sure HuskSync to create the tables, otherwise migrate will fail).
